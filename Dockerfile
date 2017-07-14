@@ -2,7 +2,7 @@ FROM alpine:3.4
 
 MAINTAINER Huang Rui <vowstar@gmail.com>
 
-ENV EMQ_VERSION=v2.0.7-clientid-kafka-protobuf
+ENV EMQ_VERSION=v2.2.0-clientid-kafka-protobuf
 
 ADD ./start.sh /start.sh
 
