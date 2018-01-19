@@ -2,7 +2,7 @@ FROM alpine:3.7
 
 MAINTAINER Huang Rui <vowstar@gmail.com>, Turtle <turtled@emqtt.io>
 
-ENV EMQ_VERSION=v2.3.3
+ENV EMQ_VERSION=v2.3.3-clientid-kafka-protobuf
 
 COPY ./start.sh /start.sh
 
@@ -78,7 +78,7 @@ RUN set -ex \
         ncurses-libs \
         readline \
     # add latest rebar
-    && git clone -b ${EMQ_VERSION} https://github.com/emqtt/emq-relx.git /emqttd \
+    && git clone -b ${EMQ_VERSION} https://github.com/vleushin/emq-relx.git /emqttd \
     && cd /emqttd \
     && make \
     && mkdir -p /opt && mv /emqttd/_rel/emqttd /opt/emqttd \
